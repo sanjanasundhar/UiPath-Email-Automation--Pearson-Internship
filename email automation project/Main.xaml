@@ -1,0 +1,533 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,5740" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="106">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1244,5675.33333333333" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="x:Object" Name="pte" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Data_table_from_Generate_Data_Table" />
+      <Variable x:TypeArguments="x:String" Name="cgDataTable" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="Database_connection_from_Connect_to_database" />
+      <Variable x:TypeArguments="sd:DataTable" Name="cg_data_values_Q1" />
+      <Variable x:TypeArguments="sd:DataTable" Name="projectTaskExpenditure" />
+      <Variable x:TypeArguments="x:Object" Name="cValue" />
+      <Variable x:TypeArguments="x:Object" Name="gValue" />
+      <Variable x:TypeArguments="x:Int32" Name="projects" />
+      <Variable x:TypeArguments="x:Object" Name="pteName" />
+      <Variable x:TypeArguments="x:Object" Name="pteValue" />
+      <Variable x:TypeArguments="x:Object" Name="c_val" />
+      <Variable x:TypeArguments="s:DateTime" Name="todayDate" />
+      <Variable x:TypeArguments="x:String" Name="currentDate" />
+      <Variable x:TypeArguments="sd:DataTable" Name="totalHourCount" />
+      <Variable x:TypeArguments="sd:DataTable" Name="processedFlagReason" />
+      <Variable x:TypeArguments="ui:UiElement" Name="expenditure_" />
+      <Variable x:TypeArguments="ui:UiElement" Name="projects_" />
+      <Variable x:TypeArguments="ui:UiElement" Name="task_" />
+      <Variable x:TypeArguments="sd:DataTable" Name="reasons_" />
+      <Variable x:TypeArguments="x:Int32" Name="nCount" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="1202,58" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Oracle.ManagedDataAccess.Client" ConnectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=prdebsdbsl001.bizsys.pearsonprd.tech)(PORT=16710)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=PPEARI)));User Id=USUNDS2;Password=UckA9rOh;PERSIST SECURITY INFO=True;" DatabaseConnection="[Database_connection_from_Connect_to_database]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:DatabaseConnect>
+    <Assign DisplayName="Set Variable Value" sap:VirtualizedContainerService.HintSize="1202,84" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[currentDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[datetime.Now.ToString(“dd-MM-yyyy”)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" ConnectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=prdebsdbsl001.bizsys.pearsonprd.tech)(PORT=16710)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=PPEARI)));User Id=USUNDS2;Password=UckA9rOh;PERSIST SECURITY INFO=True;" DataTable="[cg_data_values_Q1]" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="1202,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" ProviderName="Oracle.ManagedDataAccess.Client" Sql="[string.Format(&quot;SELECT{0}{1}    phase_code,status_code{2}{3}FROM{4}{5}    apps.fnd_conc_req_summary_v{6}{7}WHERE{8}{9}    program ='PSO PA Oracle Expenditure Update and Load'{10}{11}    AND argument_text = 'N, , , US Pearson OU'{12}{13}    AND requestor = 'PSO_BATCH_USER_WAVE7'{14}{15}    AND TRUNC(actual_start_date)=TRUNC(SYSDATE)&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]">
+      <ui:ExecuteQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteQuery.Parameters>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExecuteQuery>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1202,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[cg_data_values_Q1.RowCount()]" />
+    <If Condition="[cg_data_values_Q1.RowCount() = 0]" sap:VirtualizedContainerService.HintSize="1202,5112" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="508,770" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="466,680" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_3">
+            <umab:OutlookApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                </ActivityAction.Argument>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,488" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="412,398" sap2010:WorkflowViewState.IdRef="SendMailX_4" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[string.Format(&quot;No Data Found- Oracle NA to TEP Interface(SA) – Daily Monitoring Alert : ({0})&quot;, currentDate)]" To="sanjana.sundhar@pearson.com" UseDocumentAsBody="False">
+                    <umab:SendMailX.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </umab:SendMailX.Files>
+                    <umab:SendMailX.HtmlBodyFromFile>
+                      <umabh:HtmlContentArgument FilePath=".data/HtmlContent1.html">
+                        <umabh:HtmlContentArgument.RuntimeImages>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </umabh:HtmlContentArgument.RuntimeImages>
+                        <umabh:HtmlContentArgument.ValueMappings>
+                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                            <umabh:HtmlTextValueMapping Name="currentDate" Value="[currentDate]" />
+                          </scg:List>
+                        </umabh:HtmlContentArgument.ValueMappings>
+                      </umabh:HtmlContentArgument>
+                    </umab:SendMailX.HtmlBodyFromFile>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umab:SendMailX>
+                </Sequence>
+              </ActivityAction>
+            </umab:OutlookApplicationCard.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </umab:OutlookApplicationCard>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="670,4949.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="628,1702.66666666667" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+            <umab:OutlookApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="616,1510.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="574,1420.66666666667" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Outlook.SearchFolder(&quot;daily%20email%20automation&quot;)]" NumberOfEmailsLimit="100" UnreadOnly="False" WithAttachmentsOnly="False">
+                    <umab:ForEachEmailX.Body>
+                      <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                        <ActivityAction.Argument1>
+                          <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
+                        </ActivityAction.Argument1>
+                        <ActivityAction.Argument2>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                        </ActivityAction.Argument2>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,1154" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="520,714.666666666667" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                            <ueab:ExcelProcessScopeX.Body>
+                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,623.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="466,533.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[string.Format(&quot;{0}\Copy of EmailExtractionFixed.xlsx&quot;, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))]">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,251.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Extraction&quot;).Cell(&quot;Text_Input&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,161.333333333333" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[Outlook.SelectedMail.Body]" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelProcessScopeX.Body>
+                          </ueab:ExcelProcessScopeX>
+                          <umab:MarkMailAsReadX DisplayName="Mark Email As Read/Unread" sap:VirtualizedContainerService.HintSize="520,134.666666666667" sap2010:WorkflowViewState.IdRef="MarkMailAsReadX_1" MailMessage="[CurrentMail]" MarkAs="Read" />
+                          <umab:MoveMailX DisplayName="Move Email" sap:VirtualizedContainerService.HintSize="520,134.666666666667" sap2010:WorkflowViewState.IdRef="MoveMailX_1" MailFolder="Processed Records" MailMessage="[CurrentMail]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </umab:ForEachEmailX.Body>
+                    <umab:ForEachEmailX.MailFilter>
+                      <umabf:MailFilterArgument LogicalOperator="And">
+                        <umabf:MailFilterArgument.Filters>
+                          <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="4">
+                            <umabf:SingleMailFilterArgument Value="{x:Null}" Criteria="Date" DateEqualsFilter="[new DateTime(2022, 8, 3)]" DateFilter="SevenDays" Operator="Equals" />
+                            <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="Subject" DateFilter="SevenDays" Operator="Equals" Value="Daily Processed record count for School Assesment to TEP Interface" />
+                          </scg:List>
+                        </umabf:MailFilterArgument.Filters>
+                      </umabf:MailFilterArgument>
+                    </umab:ForEachEmailX.MailFilter>
+                  </umab:ForEachEmailX>
+                </Sequence>
+              </ActivityAction>
+            </umab:OutlookApplicationCard.Body>
+          </umab:OutlookApplicationCard>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[projectTaskExpenditure]" DisplayName="Run query" ExistingDbConnection="[Database_connection_from_Connect_to_database]" sap:VirtualizedContainerService.HintSize="628,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="[string.Format(&quot;SELECT 'PROJECTS' interface, COUNT (*) COUNT{0}{1}  FROM apps.xxpso_pa_na_project_stg{2}{3}WHERE batch_id IN{4}{5}           (SELECT batch_id{6}{7}             FROM apps.xxpso_interface_batch_log{8}{9}            WHERE     interface_code = 'PA_341_ITI_01'{10}{11}                  AND TRUNC (creation_date) = TRUNC (SYSDATE)){12}{13}UNION ALL{14}{15}SELECT 'TASKS' interface, COUNT (*){16}{17}  FROM apps.xxpso_pa_na_task_stg{18}{19}WHERE batch_id IN{20}{21}           (SELECT batch_id{22}{23}             FROM apps.xxpso_interface_batch_log{24}{25}            WHERE     interface_code = 'PA_341_ITI_02'{26}{27}                  AND TRUNC (creation_date) = TRUNC (SYSDATE)){28}{29}UNION ALL{30}{31}SELECT 'EXPENDITURE', COUNT (*){32}{33}  FROM apps.xxpso_pa_schools_exp_stg{34}{35}WHERE batch_id IN{36}{37}           (SELECT batch_id{38}{39}             FROM apps.xxpso_interface_batch_log{40}{41}            WHERE     interface_code = 'PA_342_ITI'{42}{43}                  AND TRUNC (creation_date) = TRUNC (SYSDATE)) &quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]">
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExecuteQuery>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[totalHourCount]" DisplayName="Run query" ExistingDbConnection="[Database_connection_from_Connect_to_database]" sap:VirtualizedContainerService.HintSize="628,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="[string.Format(&quot;   --Get the total hours count{0}{1}SELECT * FROM (select 'T' processed_flag,count ( * ) total_records , SUM ( QUANTITY ) TOTAL_HOURS from apps.xxpso_pa_schools_exp_stg{2}{3}WHERE  batch_id = (SELECT batch_id{4}{5}             FROM apps.xxpso_interface_batch_log{6}{7}            WHERE     interface_code = 'PA_342_ITI'{8}{9}                  AND TRUNC (creation_date) = TRUNC (SYSDATE)){10}{11}                  UNION ALL                   --Get the totals for processed count{12}{13}  SELECT processed_flag, COUNT (*) total_records, SUM (quantity) total_hours{14}{15}    FROM apps.xxpso_pa_schools_exp_stg{16}{17}   WHERE batch_id = (SELECT batch_id{18}{19}             FROM apps.xxpso_interface_batch_log{20}{21}            WHERE     interface_code = 'PA_342_ITI'{22}{23}                  AND TRUNC (creation_date) = TRUNC (SYSDATE)){24}{25}GROUP BY processed_flag ) ORDER BY DECODE(processed_flag,'T',1,'S',2,3) ASC&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]">
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExecuteQuery>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[processedFlagReason]" DisplayName="Run query" ExistingDbConnection="[Database_connection_from_Connect_to_database]" sap:VirtualizedContainerService.HintSize="628,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[string.Format(&quot; SELECT 'T' processed_flag_reason,{0}{1}         COUNT (*)          error_record_count,{2}{3}         SUM (quantity)     total_hours{4}{5}    FROM apps.xxpso_pa_schools_exp_stg{6}{7}   WHERE     NVL (processed_flag, 'N') &lt;&gt; 'S'{8}{9}         AND processed_flag_reason IS NOT NULL{10}{11}         AND 1=(  CASE WHEN processed_flag_reason NOT LIKE ',7%.1 - ORIG_TRANSACTION_REFERENCE already exists in TEP' THEN (CASE{12}{13}                       WHEN  NOT REGEXP_LIKE (processed_flag_reason, '^,1. - ORIG_TRANSACTION_REFERENCE already exists in TEP') THEN 1 ELSE 2 END){14}{15}                       ELSE 2{16}{17}                   END){18}{19} {20}{21}&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]">
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExecuteQuery>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[reasons_]" DisplayName="Run query" ExistingDbConnection="[Database_connection_from_Connect_to_database]" sap:VirtualizedContainerService.HintSize="628,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_5" Sql="[string.Format(&quot; SELECT processed_flag_reason,{0}{1}         COUNT (*)          error_record_count,{2}{3}         SUM (quantity)     total_hours{4}{5}    FROM apps.xxpso_pa_schools_exp_stg{6}{7}   WHERE     NVL (processed_flag, 'N') &lt;&gt; 'S'{8}{9}         AND processed_flag_reason IS NOT NULL{10}and processed_flag_reason NOT LIKE '%ORIG_TRANSACTION_REFERENCE already exists in TEP'{11}{12}GROUP BY processed_flag_reason ORDER BY total_hours DESC&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]">
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+          </ui:ExecuteQuery>
+          <ueab:WriteRangeX Destination="[Notes.Sheet(&quot;Sheet2&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="628,161.333333333333" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[reasons_]" />
+          <ueab:CopyPasteRangeX DestinationRange="[ExcelClipboardX.Value]" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="628,215.333333333333" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_1" PasteOptions="All" SourceRange="[Notes.Sheet(&quot;Sheet2&quot;)]" Transpose="False" />
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: OPA NA to OPA TEP Interface Errors - 2022.xlsx" sap:VirtualizedContainerService.HintSize="628,1433.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="fd5c3f0b-14a6-4c93-ae88-a4596fed2759" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1210" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="358,23.3333333333333" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  <uix:NClick ClickType="Single" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="358,157.333333333333" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5c3f0b-14a6-4c93-ae88-a4596fed2759" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://usc-excel.officeapps.live.com/x/_layouts/xlviewerinternal.aspx?unified=1&amp;ui=en%2DUS&amp;rs=en%2DUS&amp;wopisrc=https%3A%2F%2Fpearsoneducationinc.sharepoint.com%2Fsites%2FGRPTOTEPOpsandSupport%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F44cff1c8300548a48cd4901ed99529ea&amp;wdenableroaming=1&amp;mscc=1&amp;hid=360858A0-006C-2000-423D-3677CFA6A511&amp;wdorigin=Other&amp;jsapi=1&amp;jsapiver=v1&amp;newsession=1&amp;corrid=90f3f302-0e53-46d3-bdde-7810dff070cb&amp;usid=90f3f302-0e53-46d3-bdde-7810dff070cb&amp;sftc=1&amp;cac=1&amp;mtf=1&amp;sfp=1&amp;wdredirectionreason=Force_SingleStepBoot&amp;preseededsessionkey=747f6ed5-3ca9-5ca8-f689-92fb6c2a8f68&amp;preseededwacsessionid=435fbf6a-9e9d-e352-3d31-dddc43095201&amp;rct=Medium&amp;ctp=LeastProtected" DesignTimeRectangle="1425, 948, 36, 36" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl aaname='New sheet' aria-role='button' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl aaname='New sheet' aria-role='button' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='A' type='' class='ewa-stb-navbutton' /&gt;" Guid="19332e32-f80b-40bc-95cd-732d230d4c0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAB1SURBVFhH7c4xCsAgEAXRHCvkoPGkWxu2S7EIMgqBTPEaP6xzRET/MgMpAykDKQMpA6n/BLZ29+s6y40wkDKQMpCaCsyIkQys3t+quyNTgRlAbA8cyc8zotoIAykDKQOppYGp2ohlgbsYSBlIGUgZSBnIRH8AlP/EMr6QFFMAAAAASUVORK5CYII=" InformativeScreenshot="ee5342362ee8c47722c20fc64d6af75d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OPA NA to OPA TEP Interface Errors - 2022.xlsx' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="122, 958, 18, 14" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl idx='6' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='path' type='path' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl class='OfficeIconColors_m22' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='path' type='path' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABBSURBVDhPY/j69et/WuAhbPCMGdPBePr0aXAME0MXx4cxDLaysqAKxjCY2njUYDiGGzyaKkYNhmO4wSM9VXz9DwCtM0ltOBUhKAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Double" DisplayName="Click 'Sheet1'" sap:VirtualizedContainerService.HintSize="358,157.333333333333" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5c3f0b-14a6-4c93-ae88-a4596fed2759" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://usc-excel.officeapps.live.com/x/_layouts/xlviewerinternal.aspx?unified=1&amp;ui=en%2DUS&amp;rs=en%2DUS&amp;wopisrc=https%3A%2F%2Fpearsoneducationinc.sharepoint.com%2Fsites%2FGRPTOTEPOpsandSupport%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F44cff1c8300548a48cd4901ed99529ea&amp;wdenableroaming=1&amp;mscc=1&amp;hid=360858A0-006C-2000-423D-3677CFA6A511&amp;wdorigin=Other&amp;jsapi=1&amp;jsapiver=v1&amp;newsession=1&amp;corrid=90f3f302-0e53-46d3-bdde-7810dff070cb&amp;usid=90f3f302-0e53-46d3-bdde-7810dff070cb&amp;sftc=1&amp;cac=1&amp;mtf=1&amp;sfp=1&amp;wdredirectionreason=Force_SingleStepBoot&amp;preseededsessionkey=747f6ed5-3ca9-5ca8-f689-92fb6c2a8f68&amp;preseededwacsessionid=435fbf6a-9e9d-e352-3d31-dddc43095201&amp;rct=Medium&amp;ctp=LeastProtected" DesignTimeRectangle="1339, 951, 63, 28" ElementType="Text" FriendlyName="'Sheet1'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl aaname='Sheet1' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl aaname='Sheet1' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='SPAN' type='' class='dark' check:innerText='Sheet1' /&gt;" Guid="ba628db3-dae0-486e-abeb-8cd031cd11ad" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAgCAYAAABJqsWHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMZSURBVGhD7Ze/a9tAFMf7x3kSBINBUCpKTSEmEC+aRIYs2hSIKGgygeBCEBgFKgJFiwcjCAhKDcGF4lJkCoKAKAQMnr99J0vKWVJ+XNKGhN7wGax7frr30Tvd6dVqtYJkjZTBIWVwSBkcUgaHlMEhZXBIGRxSBoeUwfEIGTG83RZaux7ixvGXR7OMRQTvQIemKmi1qOASG1EZ9zJlxIEFTeHruKYmIz23KZiK3FKhmzbsDzkmk+M8TxmLMZy9LozTuHmcSKY+rJ3i4d5HxvIrnA4rcIBZyl1v5BnJoAfIiuyPGmT88mF01hKUnX0Yb+8rY+Ghf1PSGi9EBtVkvDfhnrOxfM4iMrSj2UZQM5yMZYLwyEC3eAKqDidMGv5DXM7g0/tI3WKTothOF+ZohnT5kNgINl1nY5v04S24PCUiMspgFWZwV3cUMgbwDlVqQQteECIYWehlk1dhR1eb/0lp8q9ZUX1YowDhxMfQ7EGhAtTDCKlwbILZJER4rGcStAOf4uj3JEL8m8tVIiSD+DWG9aZYYxb86Q1PuEzcUMj3Ibp0vWWOcVVeTxAYlHfXxbzSBbHbpzxtONOHxBK3LZMNRGUwqO2jk/31rpJJcRDW2q5IrMNP6mPuNo1tu9fvkx8uCVJgn/NxOZcBDLpPz82LEYll/FMZBcs4exespVDbhyk3nifmC66OcTdNPxvZhG+FOkw0NuNJZBTQ0jFp/bYU/sWUJ27cTeo3jUesvTVYn9iavoFv6yUpEpvxpDIYFwNoGzcUk5GcsgKp9aNqbB2R2Iwnl1E7g4jJWE0dtOn/2vG8EtuASCwjsrNd5u/KiIawzuaNe/78JH+LfymuCcpgp9tiqf3kY9lYivB0jOQhsYzifHSnPBEZebux75LenpV/l1gw3q232s0tVFAGUX73KBoMx0NAa9//aKLPDmuVPCKx5WeE0oN9RmedkwGCRx+6yPo8GMLUtfLU11La0HQTw0m1BcVlZCxCOJS/XWzbHQ06HZZml5U4wdj0woOZPzSlY2LclE9Ixn+OlMEhZXBIGRxSBoeUUbLCHy2raR3pcloSAAAAAElFTkSuQmCC" InformativeScreenshot="603a267bdfedd703d1627a2069ddd6f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OPA NA to OPA TEP Interface Errors - 2022.xlsx' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1434, 957, 16, 16" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;svg&amp;gt;path' idx='8' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='path' type='path' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl class='OfficeIconColors_m22' aaname='' parentid='m_excelWebRenderer_ewaCtl_m_sheetTabBar' tag='path' type='path' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABMSURBVDhP7cy7DQAgDENBxkIZFCZ1HeSOj5UGKqC4huCXAPhJlwRrLW6W5W32g9qlQY4iDKr33hDkYMcSjPAzR+o2+0Ht0SCp2wjeACHUooQClxwjAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Rename sheet to'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,218.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="fd5c3f0b-14a6-4c93-ae88-a4596fed2759" Text="[&quot;Consolidated Errors &quot; + currentDate]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://usc-excel.officeapps.live.com/x/_layouts/xlviewerinternal.aspx?unified=1&amp;ui=en%2DUS&amp;rs=en%2DUS&amp;wopisrc=https%3A%2F%2Fpearsoneducationinc.sharepoint.com%2Fsites%2FGRPTOTEPOpsandSupport%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F44cff1c8300548a48cd4901ed99529ea&amp;wdenableroaming=1&amp;mscc=1&amp;hid=C4CE56A0-0017-2000-32C7-87F4F3055EFC&amp;wdorigin=Other&amp;jsapi=1&amp;jsapiver=v1&amp;newsession=1&amp;corrid=506bf519-01b2-494c-ae5b-5145d93ab3ba&amp;usid=506bf519-01b2-494c-ae5b-5145d93ab3ba&amp;sftc=1&amp;cac=1&amp;mtf=1&amp;sfp=1&amp;wdredirectionreason=Force_SingleStepBoot&amp;preseededsessionkey=cad1330d-3999-e71b-13dc-f8358060cb1c&amp;preseededwacsessionid=d68dc028-fc7e-fd97-5961-e4f7ae3d4fe0&amp;rct=Medium&amp;ctp=LeastProtected" DesignTimeRectangle="250, 579, 636, 45" ElementType="InputBox" FriendlyName="'Sheet2'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' class='nameInputField field-589' aaname='Rename sheet to:' /&gt;" Guid="0000a60d-8436-4f2e-a158-4baa1e6ce0af" ImageBase64="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" InformativeScreenshot="c910a28a9f1b91d7cf94fd059ebcf96a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OPA NA to OPA TEP Interface Errors - 2022.xlsx' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="248, 534, 639, 43" ElementType="Text" FriendlyName="'Rename sheet to'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' type='' class='ms-Label textContainer root-587' aaname='Rename sheet to:' check:innerText='Rename sheet to:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAoMAAAAvCAYAAACYL8AyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAiPSURBVHhe7d2JbxZFHMZx/yQ1XiBRVFARDw5RbkEBBeUqGC4VlEtAIGK4ETByRIyCCQaCEQQRwyEQSIAQoBwFuUFuCDDmmb6/Zd5l33YXSgvZ7yeZ0O7O7s68bbIPMzvbhxwAAAByizAIAACQY4RBAACAHCMMAgAA5BhhEAAAIMcIgwAAADlGGAQAAMgxwiAAAECOEQYBAAByjDAIAACQY4RBAACAHCMMAgAA5BhhEAAAIMcIgwAAADlGGAQAAMgxwiAAAECOEQYBAAByjDAIAACQY4TBOnLmzBnXsUMH9+gjD7slSxYXtgIAANSuojC4b98+1/SVJj6ghKXhs8+4fmVlbv369e7GjRuF2rgbhEEAAHA/SBUGrTzx+GNu1qyZ7vr164UjcKfupzCon+emjRvdsKFD3a+/Li1srd7Bgwfd9GnT3NgxX7rLly8XtgIAgAdJYhhU0dfm+PHjbtDAAT64vPRiY7d79+7CHtyp+ykMKsgNHjwoc1tUV8foWMIgAAAPplRhUHbt3OkavfC8v/kvXZp+9AjJCIMAAOB+kDoMnjp1yrVv1zYxMJw9e9ZNmTLZvfZqU7+/caMX/PenTp4s1Kg06euvo/Bw+vRpN2f2bF9X0889enR3O3bsKNSspOcTN2/+x30+bJivp2P1/OLw4V+4I0eOFGpVsmCigHX06L9uzpxb5/64f7+o/q5du1xZWV+/XeeaNm2qu3Dhgt8XStunUlRv5swZrnmzN/zxTz35hO+jfa7xMFhRcciPvqqe2vXVuHG+DXGa0l2+fLnr9E5H3wfVV/927tzhbt68WahVKU1d+9ziRW1TG5PY70nScZs2bSrUqvz5/b1une+3rq39+jyTPscTJ074eq3ebOn27t1b2AoAAO611GFw69atrkGDp33Zvn1bYatz+8vLXYcO7aMbvb624Na1y3v+Jm8sDOqm36d3bx8QNO2sbSoKAocOHSrUvtUeBZm3WrVybdq0jkKFvlboMxZqFL569+p127m7vPeuW7nyd9+25xo+6wOX7ZswfnzRc5BZ+pRE+1VP9XUdhWi1X/2wsBSGwRHDh/t2x9s1csQId/XqVV9fLl686MaOHVN03hbNm0Xfa4GPSVv3txUr/D67rvV34IAB7r+EMCp6VvDDHj2ioGzn13H2u6Hrf/H5ML/f6qh/9n089C1btizaF//PBgAAuHeqDYMaQVI46ty5k79RDx36WTQlaNOLCjmLFy+OVhorCHz26Se+vhac2CiUhUGViRMnuEuXLvntGv2z4Lbohx/8Ntm/f79buGBBVE8OHz7sg6DqhqEhHOH6ZMgQP9qn665du9YHWG1XO3V+BT+FrCmTJ/vtLVs0dxUVFf48WfuUZMH8+b5er149iwLVgQMHfJ8kDIPhtcJ2xUO59dH6J2rHL78s8ed4v1u36HpZ6tb0NLGus3DhwqgPGzbcWoWuz8B+l8LjGBkEAKBuJIZB3ajjRQFi3LixRVOqNlpY1rePuxibatXIk47r3v0Dd+7cOb/NwqBGkbQoxVy7ds1P/WqfQmJVQUv7VEd1dT5jwSS+wEXtUvu0LwxAYs9Bqm9btmz227L2Kcm3s2b5ehqhLFUvDIOaBg9HAPfs2eOavPyy32cjiWq32q/2qt0hm8K3UdssdaWmw6AeAdDUdKnz2Wec1D4AAFC7UoXB+vWe8qNd4VSq/PzTT7fVjZfw2bPwmcEwPEipfefPn3d/rlnjn+3r2fOjaKpTJSkMxp91C4NOWF+OHTvm2rR+2++z0JW1T0m2bdsWTbtqelijcepHKAyD8cAU7rN2hQGxqqL6WepKTYdBu76Kvo4L+6efLQAAqDtVThNrak8jZnqeTaNnM6ZPLwqEFuA0tffNN5Pc1KlTbivz58+LRtiyhkGNxNmzenoGUNPDo0aNdJ07veO33W0YTApdWfuURKOX69b95d54/TV/LhWFw3nzvo9GALOGQf2r7zWiNnr0qMR2qWhKP0tdqekwaNe336O4qvoOAABqV6oFJAo2ChYKNOEiBXs2TosNwuf6SskSBm2qUyFUo3VJITQMdzUVBrP2qSpqs85rq5d1XnsmMmsYtCntUqNtoSx1pabDYHXXD/sX/j4BAIDalyoMKtToeUHdvBXQ9NyZaIpP2zRyGK4CLiVLGCzVllLhrqbCYNY+paERVv2lDp3X+pc1DIZT2npdTFWy1JXwM1LwTss+83hw1vOgei5R+5LCpT0zGP/ZAgCA2pcqDEp5ebkPSLrB6/2AmgoNb/pacBEuCrly5YoPAuFraO4kDGpEbdWqVf56ClVadWujbPciDGbtUxIFyvA9egrTmnLWObVQRgtmsoZBnUOvwNE2fS7abgtt9LnoOcUfFy3y32epK5q6tpXS4Wrx6ujl4zpGvxc25Sy6ln5H7PqlVhPrPxhqq7CaGACAupE6DOoGb68L0YpdvbhYNM1niyUU0uLvA7QwI1nCoF7l0r9fv6Lz6r12en+fbb8XYVCy9CmJrmPH6d174fv47NisYVDC9xeqxN+BGPYvS13R9LXVVTu7deta9Dkm0apteyWQ+qtpYWtv+CoeO2f4nkEFP7XR8J5BAADqRuowKHqOTzdx3bD11zJ0wxf99QyNeFmA0r96KfHq1X8UvTJFAUT704RB0aicXrysEKailxjrL4lY3TDQ1GQYlLR9SqKRQX1OFh4VwPRiaZ3T3EkYFE3HaiGKjdIqhLVr28Z9N3fubeEtS12Nemo0z/obf0diEv0HQc+TKvTqGPUzHDXV56SQZ38BRUVfa3V1/HlMRgYBAKgbRWEQAAAA+UIYBAAAyDHCIAAAQI4RBgEAAHKMMAgAAJBjhEEAAIAcIwwCAADkGGEQAAAgxwiDAAAAOUYYBAAAyDHCIAAAQI4RBgEAAHIsCoNP169HoVAoFAqFQslJqeTc/6GltwK/T/T8AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="358,157.333333333333" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5c3f0b-14a6-4c93-ae88-a4596fed2759" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://usc-excel.officeapps.live.com/x/_layouts/xlviewerinternal.aspx?unified=1&amp;ui=en%2DUS&amp;rs=en%2DUS&amp;wopisrc=https%3A%2F%2Fpearsoneducationinc.sharepoint.com%2Fsites%2FGRPTOTEPOpsandSupport%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F44cff1c8300548a48cd4901ed99529ea&amp;wdenableroaming=1&amp;mscc=1&amp;hid=C4CE56A0-0017-2000-32C7-87F4F3055EFC&amp;wdorigin=Other&amp;jsapi=1&amp;jsapiver=v1&amp;newsession=1&amp;corrid=506bf519-01b2-494c-ae5b-5145d93ab3ba&amp;usid=506bf519-01b2-494c-ae5b-5145d93ab3ba&amp;sftc=1&amp;cac=1&amp;mtf=1&amp;sfp=1&amp;wdredirectionreason=Force_SingleStepBoot&amp;preseededsessionkey=cad1330d-3999-e71b-13dc-f8358060cb1c&amp;preseededwacsessionid=d68dc028-fc7e-fd97-5961-e4f7ae3d4fe0&amp;rct=Medium&amp;ctp=LeastProtected" DesignTimeRectangle="659, 692, 63, 21" ElementType="Text" FriendlyName="'OK'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl id='id__1588' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl id='id__1588' tag='SPAN' type='' class='ms-Button-label label-572' aaname='OK' check:innerText='OK' /&gt;" Guid="0648239c-bee9-4f42-8723-497c76248f41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAZCAYAAABq35PiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKoSURBVFhH7ZdNaxNBGMf9CH4AP4FnwXPFm+BFEQ8K4kEFvSioIIqHQpCAtXqRXNoaa4tYAlqt5BDTFmrUJmpNoUUTajRt2to2bfqSpHl57P+RGWY3u33RmYKwD/xg2Z1Z9vnNzJMne/bebCKPP3gyFDwZCp4MBU+GgidDwZOhYFTGsY5rFPk2TAtrBarX64So1mo0XZijR/GXtN9/omGOPxqkcrXC4Fp9djx4nSaXZvk9pUqZ7vZ3Wp7/K8ZkBGIhKq6X+MPdAomde+azzHOTsa/5CL3LJHkehHZ/Clvm6cCIDKwYVg5RqVVpaGKELj9vofM9PvJF2mliYUruFAjBiou5bjKQPCRgXjQVZznimS60yzjadoWmln5xom5bGYkgISGkP52Qz5xk3HnTIeWO5tJ08MEZOV4n2mW0fXhBtY0kkejrsbeOY8DhwEX6kZ/mBGdX8nSy8wbft8tQ64R9F+lGu4z3mVH+8NVyka723nccI+gbG+Kx6i5QZdwb7OKdgFgsLvNRs79DJ1plHGg9Ten5LH88jgqOjNM4QftwrzwqwfgrvqfKSGTHeZfhumXgScN83WiVodaL7cgQiSPsMiABxRcxszwvj5FJtMo49PACZfI5TmAnOwPgGvfUnREej+1K4RRorxmfJ7/yx6+U1+hSyO84RiBqBvqR2+EA31Nl4Ho3flIF2mX0jETkaoeSUccxwO1I2WVgN4giaqrZEmiXcfZpM7ffiO30GUD9CbbLwD3TbbhAuwzwONHHq4hAUgPpj7IDbR3stnSg2cUZS21xkgHUrja/IXurI/g3GJGBlYcQJLRZpOZ+NjRRbjKAqB8IEwXViAzBqa5bFPv+hQqlVbkTSpV17jzxR26n/1rRxyRzKX4P3qe7oBqV8b/hyVDwZEia6DeW84bsBUCjhwAAAABJRU5ErkJggg==" InformativeScreenshot="54d20e293197a5f072653e2bca5c45a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OPA NA to OPA TEP Interface Errors - 2022.xlsx' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'A'" sap:VirtualizedContainerService.HintSize="358,203.333333333333" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="fd5c3f0b-14a6-4c93-ae88-a4596fed2759" Shortcuts="[d(hk)][d(ctrl)]V[u(ctrl)][u(hk)]" Version="V1">
+                    <uix:NKeyboardShortcuts.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pearsoneducationinc.sharepoint.com/:x:/r/sites/GRPTOTEPOpsandSupport/_layouts/15/Doc.aspx?sourcedoc=%7B44CFF1C8-3005-48A4-8CD4-901ED99529EA%7D&amp;file=OPA%20NA%20to%20OPA%20TEP%20Interface%20Errors%20-%202022.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=d3720641-90d0-44de-b2a6-447b69b8bedf" DesignTimeRectangle="71, 469, 469, 449" FriendlyName="'chrome.exe OPA'" Guid="ad0ca5ef-ef4f-4a00-a57e-fa5cf18c85cf" ImageBase64="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" InformativeScreenshot="01009cf6b5c3e6c5b176ef7f4fbbf567.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OPA NA to OPA TEP Interface Errors - 2022.xlsx' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="66, 433, 95, 29" ElementType="Text" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='A' parentid='m_excelWebRenderer_ewaCtl_columnHeadersDiv_Flow_0' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WebApplicationFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='A' parentid='m_excelWebRenderer_ewaCtl_columnHeadersDiv_Flow_0' type='' tag='DIV' class='ewr-chc' check:innerText='A' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAhCAYAAADNqxXyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGlSURBVGhD7Zg/a8JAGMb7VZz8DH6BLA5uQsEuHVwKRTCLDqWSQRehFRxCwSIFKWSpCKFQSkCXOFSRSi1d/BTOjyKX+O/s6nPyDj9I7p53eX+5S3IXi8UCAgcigwiRQYTIIEJkELGWMZ/P8ff7I5yIIAhEBgsigwiRQYTIIEJkEHEWMnw3g0TRisl5Q22OHfNlzLqw7Y2INbUWRrosOcbLmPZKSCoJSTuthOTRCPV5ZgyXMYH3GAkooN4uqGsL6XagyXNjtozxC65V89db01cLuej+vom+roYYo2WMvJt4JWQ7g9XYAA1HySheot7X17FisIwh3FrU+M07Iuzk1ZiF1JO/V8ONuTJCF1nV9ITjItSNl6vwZ1s15Bgro9++ilfAcTKofOjrGTFURoD6na75hySbXU09J2bK+KwiFTXcdvC2vxXtzJfgfe/Nk2KkjO3jD+2TP/NRKSsZxTRue5PDDCHmydg5/jje6J3zqodXTDUZNoyTsX388e8W9O5scqu/8+exJkOGoS/w80RkECEyiBAZRIgMIkQGEbGM+JtcODkigwYLS5gj2T0WRNp0AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopLeft" X="9" Y="10" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NKeyboardShortcuts.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-9, 10, 1135, 1032" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADkSURBVDhPY0AGiovT3gPxf2zY+EgjNvweqhUCsGmEYSyawRiqFQKwaYRhbJpBmEGgxvE9EP/HhwXrnLFqBmGQAVg1oWPBMDOsLoMbULl1yn8QyFrb8d92aiqY3bFvAcKQQGP8BoDww/fPwfjwvQtgGlmOKAN85haCbQYBEBtZjigDopfWQLX/B7OR5TjsFFD4MAw3QL7FF+58mBdAYjB5ggZMO7YGbLNeTyTcK8iBSNAAQhifAQQTkkC5/X8ePen/EjHmGBiaiCEApAgXFnLVJGwANgWEMFQrBAAF3qMrwI/N3wMAWZLoJAon4YQAAAAASUVORK5CYII=" InformativeScreenshot="5404dfdebfae74875d7d248898fadd87.png" Selector="&lt;html app='chrome.exe' title='OPA NA to OPA TEP Interface Errors - 2022.xlsx' /&gt;" Url="https://pearsoneducationinc.sharepoint.com/:x:/r/sites/GRPTOTEPOpsandSupport/_layouts/15/Doc.aspx?sourcedoc=%7B44CFF1C8-3005-48A4-8CD4-901ED99529EA%7D&amp;file=OPA%20NA%20to%20OPA%20TEP%20Interface%20Errors%20-%202022.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=d3720641-90d0-44de-b2a6-447b69b8bedf" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="628,680" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+            <umab:OutlookApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                </ActivityAction.Argument>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,488" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="412,398" sap2010:WorkflowViewState.IdRef="SendMailX_3" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[string.Format(&quot;Oracle NA to TEP Interface(SA) – Daily Monitoring Alert : ({0})&quot;, currentDate)]" To="sanjana.sundhar@pearson.com" UseDocumentAsBody="False">
+                    <umab:SendMailX.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </umab:SendMailX.Files>
+                    <umab:SendMailX.HtmlBodyFromFile>
+                      <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                        <umabh:HtmlContentArgument.RuntimeImages>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </umabh:HtmlContentArgument.RuntimeImages>
+                        <umabh:HtmlContentArgument.ValueMappings>
+                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="16">
+                            <umabh:HtmlTextValueMapping Name="Projects" Value="[projectTaskExpenditure.Rows(0).Item(1)]" />
+                            <umabh:HtmlTextValueMapping Name="Tasks" Value="[projectTaskExpenditure.Rows(1).Item(1)]" />
+                            <umabh:HtmlTextValueMapping Name="Expenditure" Value="[projectTaskExpenditure.Rows(2).Item(1)]" />
+                            <umabh:HtmlTextValueMapping Name="tCount" Value="[totalHourCount.Rows(0).Item(1)]" />
+                            <umabh:HtmlTextValueMapping Name="tHours" Value="[totalHourCount.Rows(0).Item(2)]" />
+                            <umabh:HtmlTextValueMapping Name="sCount" Value="[totalHourCount.Rows(1).Item(1)]" />
+                            <umabh:HtmlTextValueMapping Name="sHours" Value="[totalHourCount.Rows(1).Item(2)]" />
+                            <umabh:HtmlTextValueMapping Name="errorRecordCount" Value="[processedFlagReason.Rows(0).Item(1)]" />
+                            <umabh:HtmlTextValueMapping Name="errorRecordHours" Value="[processedFlagReason.Rows(0).Item(2)]" />
+                            <umabh:HtmlTextValueMapping Name="currentDate" Value="[currentDate]" />
+                            <umabh:HtmlTextValueMapping Name="expenditure_" Value="[Notes.Sheet(&quot;Text&quot;).Cell(&quot;F5&quot;)]" />
+                            <umabh:HtmlTextValueMapping Name="projects_" Value="[Notes.Sheet(&quot;Text&quot;).Cell(&quot;F6&quot;)]" />
+                            <umabh:HtmlTextValueMapping Name="task_" Value="[Notes.Sheet(&quot;Text&quot;).Cell(&quot;F7&quot;)]" />
+                            <umabh:HtmlTextValueMapping Name="nCount" Value="[Convert.ToInt32(totalHourCount.Rows(0).Item(1)) - Convert.ToInt32(totalHourCount.Rows(1).Item(1))]" />
+                            <umabh:HtmlTextValueMapping Name="nHours" Value="[Convert.ToInt32(totalHourCount.Rows(0).Item(2)) - Convert.ToInt32(totalHourCount.Rows(1).Item(2))]" />
+                          </scg:List>
+                        </umabh:HtmlContentArgument.ValueMappings>
+                      </umabh:HtmlContentArgument>
+                    </umab:SendMailX.HtmlBodyFromFile>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umab:SendMailX>
+                </Sequence>
+              </ActivityAction>
+            </umab:OutlookApplicationCard.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </umab:OutlookApplicationCard>
+        </Sequence>
+      </If.Else>
+    </If>
+  </ueab:SequenceX>
+</Activity>
